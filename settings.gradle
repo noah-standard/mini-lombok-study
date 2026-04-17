@@ -1,0 +1,6 @@
+rootProject.name = 'mini-lombok-study'
+include 'mini-reflect-core'
+include 'mini-accessor'
+include 'mini-repo-memory'
+include 'mini-repo-jdbc'
+include 'sample-app'

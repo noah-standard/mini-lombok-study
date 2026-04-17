@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+}
+
+allprojects {
+    version = '0.0.1-SNAPSHOT'
+
+    repositories {
+        mavenCentral()
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(17)
+        }
+    }
+
+    ext {
+        slf4jVersion = '2.0.13'
+        junitVersion = '5.10.2'
+    }
+
+    dependencies {
+        implementation "org.slf4j:slf4j-api:${slf4jVersion}"
+
+        testImplementation "org.junit.jupiter:junit-jupiter:${junitVersion}"
+        testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+
+    compileJava {
+        options.encoding = 'UTF-8'
+    }
+}

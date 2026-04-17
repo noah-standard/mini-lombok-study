@@ -1,0 +1,9 @@
+plugins{
+    id 'application'
+}
+
+dependencies {
+    implementation project(':mini-repo-memory')
+    implementation project(':mini-repo-jdbc')
+    runtimeOnly 'ch.qos.logback:logback-classic:1.5.6'
+}

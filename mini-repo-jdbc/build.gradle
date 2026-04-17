@@ -1,0 +1,6 @@
+dependencies {
+    implementation project(':mini-reflect-core')
+    implementation project(':mini-accessor')
+    implementation 'org.postresql:postgresql:42.7.3'
+    implementation 'com.zaxxer:HikariCP:5.1.0'
+}
