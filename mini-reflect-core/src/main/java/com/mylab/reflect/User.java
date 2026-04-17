@@ -19,4 +19,11 @@ public class User extends Entity{
         this.age = age;
         this.active = true;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+    }
 }
